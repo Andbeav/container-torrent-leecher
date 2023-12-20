@@ -4,7 +4,7 @@ Image for downloading torrents without seeding. Utilizes the torrent functionali
 
 # Installation
 
-You can either build from the Dockerfile or load the prebuilt image from the [releases page](https://github.com/Andbeav/container-torrent-leecher/releases). I most likely won't push to docker hub.
+You can either build from the Dockerfile or pull the prebuilt image. I most likely won't push to docker hub.
 
 ## Building from Dockerfile
 
@@ -12,13 +12,10 @@ You can either build from the Dockerfile or load the prebuilt image from the [re
 $ docker build -t torrent .
 ```
 
-## Loading from prebuilt image
-
-Download the prebuilt image from the [releases page](https://github.com/Andbeav/container-torrent-leecher/releases). (Example downloads via `wget`)
+## Pulling the prebuilt image
 
 ```sh
-$ wget https://github.com/Andbeav/container-torrent-leecher/releases/download/image/torrent.tar
-$ docker load -i torrent.tar
+$ docker pull ghcr.io/andbeav/torrent:latest
 ```
 
 # Running the image
@@ -30,7 +27,7 @@ In order for progress updates to be displayed you will need to run it with these
 
 In order to save the downloaded content you need to specify a volume mount as well:
 
-* `--volume`/ `-v`
+* `--volume` / `-v`
 
 Example command:
 
